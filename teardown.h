@@ -14,6 +14,7 @@ TeardownStack *teardown_stack_create(void);
 void exec_teardown(int, void *arg);
 void register_teardown_unit(TeardownStack *, void *, teardown_func);
 
+// when we move to translation unit
 static struct teardown_unit *
 pop_teardown_unit(TeardownStack *stk) {
   if (stk->sp == NULL) return NULL;
