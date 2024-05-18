@@ -7,8 +7,7 @@
 void teardown_string(int status, void *resource) {
   (void) status;
   char **p_str = (char **) resource;
-  if (*p_str == NULL) 
-    fprintf(stdout, "String previously freed: %s\n", *p_str);
+  if (*p_str == NULL) fprintf(stdout, "String previously freed: %s\n", *p_str);
   else {
     fprintf(stderr, "Freeing string: %s\n", *p_str);
     free(*p_str);
